@@ -39,7 +39,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ContextConfiguration(classes = {TaskService.class})
 @ExtendWith(SpringExtension.class)
 @DisabledInAotMode
-class TaskServiceDiffblueTest {
+class TaskServiceTest {
     @MockBean
     private TaskRepository taskRepository;
 
