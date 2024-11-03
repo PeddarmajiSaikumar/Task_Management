@@ -37,12 +37,4 @@ public class UserService {
         Users savedUsers=usersRepository.save(users);
         return entityToDto(savedUsers);    //returning UserDto
     }
-
-    public List<Users> getAllUsers() {
-        return null;
-    }
-
-    public Users getUserById(Long id) {
-        return null;
-    }
 }

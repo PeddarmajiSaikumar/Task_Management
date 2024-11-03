@@ -66,7 +66,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -78,7 +78,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -113,7 +113,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -168,7 +168,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -183,7 +183,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -216,7 +216,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -243,7 +243,7 @@ class TaskServiceTest {
         users3.setEmail("jane.doe@example.org");
         users3.setId("42");
         users3.setName("Name");
-        users3.setPassword("iloveyou");
+        users3.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users3);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -280,7 +280,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -311,7 +311,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -356,7 +356,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -383,7 +383,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("`123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -396,7 +396,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -427,7 +427,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Users users2 = mock(Users.class);
         when(users2.getId()).thenReturn("foo");
         doNothing().when(users2).setEmail(Mockito.<String>any());
@@ -437,7 +437,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Task task = mock(Task.class);
         when(task.getUsers()).thenReturn(users2);
         doNothing().when(task).setIdd(Mockito.<String>any());
@@ -453,7 +453,7 @@ class TaskServiceTest {
         users3.setEmail("jane.doe@example.org");
         users3.setId("42");
         users3.setName("Name");
-        users3.setPassword("iloveyou");
+        users3.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users3);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -467,7 +467,7 @@ class TaskServiceTest {
         verify(users2).setEmail(eq("jane.doe@example.org"));
         verify(users2).setId(eq("42"));
         verify(users2).setName(eq("Name"));
-        verify(users2).setPassword(eq("iloveyou"));
+        verify(users2).setPassword(eq("123456789"));
         verify(usersRepository).findById(eq("42"));
         verify(taskRepository).findById(eq("Idd"));
     }
@@ -489,7 +489,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Task task = mock(Task.class);
         doNothing().when(task).setIdd(Mockito.<String>any());
         doNothing().when(task).setTaskname(Mockito.<String>any());
@@ -507,7 +507,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> emptyResult = Optional.empty();
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(emptyResult);
 
@@ -519,7 +519,7 @@ class TaskServiceTest {
         verify(users2).setEmail(eq("jane.doe@example.org"));
         verify(users2).setId(eq("42"));
         verify(users2).setName(eq("Name"));
-        verify(users2).setPassword(eq("iloveyou"));
+        verify(users2).setPassword(eq("123456789"));
         verify(usersRepository).findById(eq("42"));
     }
 
@@ -539,13 +539,13 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("`123456789");
 
         Users users2 = new Users();
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Task task = mock(Task.class);
         when(task.getIdd()).thenThrow(new UserNotFoundException("An error occurred"));
         when(task.getUsers()).thenReturn(users2);
@@ -562,7 +562,7 @@ class TaskServiceTest {
         users3.setEmail("jane.doe@example.org");
         users3.setId("42");
         users3.setName("Name");
-        users3.setPassword("iloveyou");
+        users3.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users3);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -598,7 +598,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -621,7 +621,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -635,7 +635,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -664,7 +664,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
 
         Task task = new Task();
         task.setIdd("Idd");
@@ -678,7 +678,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -708,7 +708,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Users users2 = mock(Users.class);
         when(users2.getId()).thenReturn("foo");
         doNothing().when(users2).setEmail(Mockito.<String>any());
@@ -718,7 +718,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Task task = mock(Task.class);
         when(task.getUsers()).thenReturn(users2);
         doNothing().when(task).setIdd(Mockito.<String>any());
@@ -734,7 +734,7 @@ class TaskServiceTest {
         users3.setEmail("jane.doe@example.org");
         users3.setId("42");
         users3.setName("Name");
-        users3.setPassword("iloveyou");
+        users3.setPassword("123456789");
         Optional<Users> ofResult2 = Optional.of(users3);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult2);
 
@@ -748,7 +748,7 @@ class TaskServiceTest {
         verify(users2).setEmail(eq("jane.doe@example.org"));
         verify(users2).setId(eq("42"));
         verify(users2).setName(eq("Name"));
-        verify(users2).setPassword(eq("iloveyou"));
+        verify(users2).setPassword(eq("123456789"));
         verify(usersRepository).findById(eq("42"));
         verify(taskRepository).findById(eq("Idd"));
     }
@@ -772,7 +772,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Optional<Users> ofResult = Optional.of(users);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 
@@ -798,7 +798,7 @@ class TaskServiceTest {
         users.setEmail("jane.doe@example.org");
         users.setId("42");
         users.setName("Name");
-        users.setPassword("iloveyou");
+        users.setPassword("123456789");
         Task task = mock(Task.class);
         doNothing().when(task).setIdd(Mockito.<String>any());
         doNothing().when(task).setTaskname(Mockito.<String>any());
@@ -816,7 +816,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("iloveyou");
+        users2.setPassword("123456789");
         Optional<Users> emptyResult = Optional.empty();
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(emptyResult);
 
@@ -828,7 +828,7 @@ class TaskServiceTest {
         verify(users2).setEmail(eq("jane.doe@example.org"));
         verify(users2).setId(eq("42"));
         verify(users2).setName(eq("Name"));
-        verify(users2).setPassword(eq("iloveyou"));
+        verify(users2).setPassword(eq("123456789"));
         verify(usersRepository).findById(eq("42"));
     }
 }
