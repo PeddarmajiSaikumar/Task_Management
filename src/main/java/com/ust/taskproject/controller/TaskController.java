@@ -41,4 +41,5 @@ public class TaskController {
         taskService.deleteTask(id,idd);
         return new ResponseEntity<>("User Deleted Successfully",HttpStatus.OK);
     }
+//    If we use @PreAuthorize(value="ROLE_ADMIN") then only admin can access if value is "ROLE_USER" then only user can only access
 }

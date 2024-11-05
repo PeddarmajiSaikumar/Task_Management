@@ -78,7 +78,7 @@ class TaskServiceTest {
         users2.setEmail("jane.doe@example.org");
         users2.setId("42");
         users2.setName("Name");
-        users2.setPassword("123456789");
+        users2.setPassword("123456789   ");
         Optional<Users> ofResult = Optional.of(users2);
         when(usersRepository.findById(Mockito.<String>any())).thenReturn(ofResult);
 

@@ -4,15 +4,18 @@ import com.ust.taskproject.payload.UserDto;
 import com.ust.taskproject.repository.UsersRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
 
     @Autowired
     private UsersRepository usersRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private Users userDtoToEntity(UserDto userDto){
         Users users=new Users();
@@ -33,8 +36,10 @@ public class UserService {
 
     public UserDto createUser(UserDto userDto) {
         //userDto is not an entity of users entity
+        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
         Users users= userDtoToEntity(userDto);       //converted UserDto top UserEntity
         Users savedUsers=usersRepository.save(users);
         return entityToDto(savedUsers);    //returning UserDto
     }
 }
+
